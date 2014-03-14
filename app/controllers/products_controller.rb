@@ -6,5 +6,9 @@ class ProductsController < ApplicationController
 
 	def show
 
+
+		@subcategories=Subcategory.all.where('category_id =?', params[:id])
+
+
 	end
 end
