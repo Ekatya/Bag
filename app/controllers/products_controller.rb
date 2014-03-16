@@ -2,7 +2,14 @@ class ProductsController < ApplicationController
 	def index
 
 		@categories=Category.all
-	end
+
+#category=Category.create(name: 'Womans', position: 1)
+#subcategory=Subcategory.new(name:'klatchi', position: 2, category_id: 2)
+#subcategory.category=category
+#subcategory.save
+
+		
+		end
 
 	def show
 
