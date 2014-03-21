@@ -32,6 +32,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'carrierwave'
+gem 'rmagick'
+
+gem 'russian'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
