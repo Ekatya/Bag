@@ -1,4 +1,8 @@
-
 <% @subcategories.each do|sub| %>
-<%= link_to sub.name, products_path %>
+ <%= link_to sub.name, sub %>
+<% end %>
+<br> <br>
+
+<% @products.each do |prod| %>
+ <%= link_to prod.name, prod %><br>
 <% end %>
