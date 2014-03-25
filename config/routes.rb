@@ -1,5 +1,5 @@
 Bag::Application.routes.draw do
-  
+  root 'categories#index'
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -12,6 +12,11 @@ end
 
  resources :subcategories 
 resources :products
+resources :sessions
+resources :users
+
+match 'sessions_destroy',    to: 'sessions#destroy',    via: :all
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
