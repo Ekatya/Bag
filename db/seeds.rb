@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# -*- coding: utf-8 -*-
+Category.create(id: 1, name: "женские", position: 1)
+Category.create(id: 2, name: "мужские", position: 2)
+Category.create(id: 3, name: "дорожные", position: 3)
+Category.create(id: 4, name: "спортивные", position: 4)
+Category.create(id: 5, name: "арт", position: 5)
+
+Subcategory.create(id: 1, name: "деловые", position: 1,  category_id: 1)
+Subcategory.create(id: 2, name: "саквояжи", position: 2, category_id: 1)
+Subcategory.create(id: 3, name: "клатчи", position: 3, category_id: 1)
+Subcategory.create(id: 4, name: "через плечо", position: 4, category_id: 1)
+Subcategory.create(id: 5, name: "пляжные", position: 5, category_id: 1)
+Subcategory.create(id: 6, name: "портфели", position: 1, category_id: 2)
+Subcategory.create(id: 7, name: "через плечо", position: 2, category_id: 2)
+Subcategory.create(id: 8, name: "барсетки", position: 3, category_id: 2)
+Subcategory.create(id: 10, name: "на колесах", position: 1, category_id: 3)
+Subcategory.create(id: 11, name: "дорожные чемоданы", position: 2, category_id: 3)
