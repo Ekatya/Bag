@@ -8,4 +8,7 @@ class CategoriesController < ApplicationController
 		@subcategories=Subcategory.all.where('category_id =?', params[:id])
         @products=Product.all.where('category_id =?', params[:id])	    
 	end
+
+
+
 end

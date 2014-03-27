@@ -1,3 +1,3 @@
 <% @products.each do |prod| %>
- <%= link_to prod.name, prod %><br>
+ <%= link_to prod.name, prod %>  <%= prod.category_id  %>  <%= prod.subcategory_id %><br>
 <% end %>

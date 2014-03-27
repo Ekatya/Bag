@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class SessionsController < ApplicationController
 layout "some"
 
@@ -22,7 +23,7 @@ def index
 
   def destroy
     session[:user_id] = nil
-    redirect_to categories_path
+    redirect_to categories_path, notice: 'впр'
     flash[:error]=false
 	end
 
