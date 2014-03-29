@@ -37,6 +37,7 @@ end
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'will_paginate', '~> 3.0'
 
 gem 'russian', '~> 0.6.0'
 
