@@ -186,7 +186,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   pg (= 0.15.1)
-  rack
   rails (= 4.0.1)
   rails_12factor (= 0.0.2)
   rmagick

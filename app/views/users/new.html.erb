@@ -1,6 +1,6 @@
 
 
-<%= form_for @user, url: {action: "create"} do |f| %> 
+<%= form_for @user, url: {action: "create", remote: true } do |f| %> 
     <%= f.label :name, "Имя" %>
     <%= f.text_field :name, class: 'dd' %>
     </br>
@@ -17,10 +17,21 @@
 <% end %>
 
 
+</br>
+</br>
+<% if @user.errors.messages[:name].length!=0  %>
+не правильное или занятое имя пользователя
+<% end %>
+</br>
 
-<% if @user.errors.any? %>
-<% @user.errors.full_messages.each do |message| %>
-	<br>
-<%= message %>
+<% if @user.errors.messages[:password].length!=0  %>
+пароль или подтверждение не верные
+</br>
+возможно длинна пароля меньше 6 символов
 <% end %>
+</br>
+
+<% if @user.errors.messages[:email].length!=0  %>
+email существует, либо имеет не верный формат
 <% end %>
+</br>

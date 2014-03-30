@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "ert"
+  Password Confirmation Doesn't Match Password: "не совпадает пароль и подтверждение"
+  can't be blank: 'пустой' 
+  Is Invalid : 'не допустимое значение'
