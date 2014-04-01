@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
 	
 	helper_method :current_user
 
-	Number_product_1=1; #кол-во выводимых продуктов в категориях
+	Number_product_1=10; #кол-во выводимых продуктов в категориях
     Number_product_2=10; #кол-во выводимых продуктов в подкатегориях
 end

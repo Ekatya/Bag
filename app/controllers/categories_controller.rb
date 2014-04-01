@@ -5,6 +5,8 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
+		@category_id=params[:id]
+		@categories=Category.all
 		@subcategories=Subcategory.all.where('category_id =?', params[:id])
         @products=Product.where('category_id =?', params[:id]).paginate(:page => params[:page], :per_page => Number_product_1) 
 
