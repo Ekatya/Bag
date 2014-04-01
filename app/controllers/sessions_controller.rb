@@ -23,7 +23,7 @@ def index
 
   def destroy
     session[:user_id] = nil
-    redirect_to categories_path, notice: 'впр'
+    redirect_to categories_path, notice: '11'
     flash[:error]=false
 	end
 

@@ -1,0 +1,10 @@
+<% @subcategories.each do |subcategory| %>
+
+<% if (SubcategoriesController.subcategories_id).to_s==(subcategory.id).to_s %>
+<%= subcategory.name %>
+<% else %>
+<%= link_to subcategory.name, subcategory %>
+<% end %>
+
+
+<% end %>

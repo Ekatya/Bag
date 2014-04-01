@@ -1,0 +1,15 @@
+<% @categories.each do|category| %>
+
+
+<% if (CategoriesController.categories_id).to_s==(category.id).to_s %>
+<%= category.name %>
+
+<% else %>
+<%= link_to category.name, category %>
+<% end %>
+
+
+<% end %>
+
+<br> <br>
+
