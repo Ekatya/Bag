@@ -1,0 +1,2 @@
+<% subcategories_mas=options_from_collection_for_select(Subcategory.where(category_id: @category_id), :id, :name) %>
+<%= select_tag( :subcategory, subcategories_mas) %>

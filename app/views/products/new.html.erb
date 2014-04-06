@@ -1,0 +1,76 @@
+<%= form_tag({action: :create, controller: :products}, multipart: true) do %> 
+
+<% categories_mas= options_from_collection_for_select(Category.all, :id, :name) %>
+<%= select_tag( :category, categories_mas) %>
+<br>
+
+<div id='result_ajax'>
+	
+	<% subcategories_mas= options_from_collection_for_select(Subcategory.where(category_id: '1'), :id, :name) %>
+<%= select_tag( :subcategory, subcategories_mas) %>
+
+</div>
+
+<br>
+
+    <%= label_tag :name, "name" %>
+    <%= text_field_tag :name, '', class: 'dd' %>
+    </br>
+    <%= label_tag :price, "price" %>
+    <%= text_field_tag :price, '', class: 'dd' %>
+    </br>
+    <%= label_tag :description, "description" %>
+    <%= text_area_tag(:description, "", size: "24x6") %>
+    </br>
+<%= label_tag :picture, "image" %>
+<%= file_field_tag 'picture' %>
+    </br>
+    <%= label_tag :articul, "articul" %>
+    <%= text_field_tag :articul, '', class: 'dd' %>
+	</br>
+    <%= label_tag :favourite, "favourite" %>
+    <%= text_field_tag :favourite, '', class: 'dd' %>
+    </br>
+
+  <%= submit_tag "add product", class: 'batn' %>
+<% end %>
+
+<%= link_to 'cancel', '/admin/products' %>
+
+
+
+<script>
+var objSel = document.getElementById("category");
+
+  //Если есть выбранный элемент, отобразить его значение (свойство value)
+
+
+
+jQuery(function($) {
+$("#category").change( function(){
+
+objSel1=objSel.options[objSel.selectedIndex].value;
+
+$.ajax({
+
+ url: 'select',
+data: "category_id_="+objSel1,
+ type: 'POST',
+success: function(result){
+//alert('123');
+$("#result_ajax").html(result);
+
+}
+
+
+});
+
+});
+});
+
+</script>
+
+
+
+
+

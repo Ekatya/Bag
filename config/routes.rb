@@ -1,6 +1,11 @@
 Bag::Application.routes.draw do
   root 'categories#index'
-  
+
+  #ajax
+  get '/admin/products/new', to: 'products#new'
+  post '/admin/products/select', to: 'products#select'
+  # 
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -16,6 +21,10 @@ resources :sessions
 resources :users
 
 match 'sessions_destroy',    to: 'sessions#destroy',    via: :all
+
+
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
