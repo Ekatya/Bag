@@ -1,20 +1,10 @@
-<% @categories.each do |sub| %>
-<% if @category_id.to_s==sub.id.to_s %>
-
- <<%= link_to sub.name, controller: "categories", action: "show", id: sub.id %>>
-
-<% else %>
-
- <%= link_to sub.name, controller: "categories", action: "show", id: sub.id %>
-
-<% end %>
-<% end %>
+<%= render 'menu' %>
+<% menu_next(@categories, @category_id, "categories", "show", -1) %>
 <br> <br>
 
-<% @subcategories.each do |sub| %>
- <%= link_to sub.name, controller: "subcategories", action: "show", id: sub.id , id2: @category_id %>
-<% end %>
+<% menu_next(@subcategories, -1, "subcategories", "show", @category_id) %>
 <br> <br>
+
 
 <% @products.each do |prod| %>
  <%= link_to prod.name, prod %>  <%= prod.category_id  %>  <%= prod.subcategory_id %><br>

@@ -11,3 +11,36 @@
  *= require_self
  
  */
+
+ body{
+ 	margin:0;
+ 	padding:0;
+ }
+
+div.body{
+	width:1024px;
+	margin:0 auto;
+	padding:10px;
+	text-align: center;
+	
+	 background-image: url('/uploads/4ffc3455d78878.21188887.png');
+ background-size: 300px;
+ background-position:300px 50px;
+ background-repeat: no-repeat;
+}
+
+a{
+background:#5ab417;
+border:1px dashed #FFFFFF;
+color:#FFFFFF;
+font: bold normal 110% serif;
+padding:1px 4px 1px 4px;
+text-decoration: none;
+padding: 2px 6px 2px 6px;
+}
+
+a:hover{
+	background:#FFFFFF;
+	color: #5ab417;
+}
+

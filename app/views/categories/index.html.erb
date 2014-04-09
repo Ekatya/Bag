@@ -1,7 +1,6 @@
+<%= render 'menu' %>
+<% menu_next(@categories,-1,"categories", "show", -1) %>
 
-<% @categories.each do|category| %>
-<%= link_to category.name, controller: "categories", action: "show", id: category.id %>
-<% end %>
 
 <br> <br>
 
