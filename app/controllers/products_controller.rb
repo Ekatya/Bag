@@ -41,6 +41,8 @@ end
     def create
 u = Product.new
 u.picture = params[:picture]
+u.picture1 = params[:picture1]
+u.picture2 = params[:picture2]
 u.category_id=params[:category]
 u.subcategory_id=params[:subcategory]
 u.name=params[:name]

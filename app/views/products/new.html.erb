@@ -1,49 +1,113 @@
-<%= form_tag({action: :create, controller: :products}, multipart: true) do %> 
-
-<% categories_mas= options_from_collection_for_select(Category.all, :id, :name) %>
-<%= select_tag( :category, categories_mas) %>
+<div class="admin_header">
+<a href="/admin/dashboard">Dashboard</a><a href="/admin/admin_users">Admin Users</a><a href="/admin/categories">Categories</a><a href="/admin/comments">Comments</a><a href="/admin/products">Products</a><a href="/admin/subcategories">Subcategories</a>
+</div>
+<br>
 <br>
 
-<div id='result_ajax'>
+
+<div class='active_admin_div'>
+Products add
+</div>
+<br>
+<br>
+<%= form_tag({action: :create, controller: :products}, multipart: true) do %> 
+<table class="active_admin_">
+<tr>
+<td>
+<% categories_mas= options_from_collection_for_select(Category.all, :id, :name) %>
+<%= select_tag( :category, categories_mas, class: 'active_admin') %>
+</td>
+<td id='result_ajax'>
+
 	
 	<% subcategories_mas= options_from_collection_for_select(Subcategory.where(category_id: '1'), :id, :name) %>
-<%= select_tag( :subcategory, subcategories_mas) %>
+<%= select_tag( :subcategory, subcategories_mas, class: 'active_admin') %>
 
-</div>
 
-<br>
-
+</td>
+</tr>
+<tr>
+<td>
     <%= label_tag :name, "name" %>
-    <%= text_field_tag :name, '', class: 'dd' %>
-    </br>
+    </td>
+    <td>
+    <%= text_field_tag :name, '', class: 'active_admin_text' %>
+</td>
+</tr>
+<tr>
+<td>
     <%= label_tag :price, "price" %>
-    <%= text_field_tag :price, '', class: 'dd' %>
-    </br>
+    </td>
+    <td>
+    <%= text_field_tag :price, '', class: 'dd' , class: 'active_admin_text' %>
+</td>
+</tr>
+<tr>
+<td>
     <%= label_tag :description, "description" %>
-    <%= text_area_tag(:description, "", size: "24x6") %>
-    </br>
+    </td>
+    <td>
+    <%= text_area_tag(:description, "", class: 'active_admin_text', style:'height:40px;') %>
+</td>
+</tr>
+<tr>
+<td>
 <%= label_tag :picture, "image" %>
-<%= file_field_tag 'picture' %>
-    </br>
+</td>
+    <td>
+<%= file_field_tag 'picture', class: 'active_admin' %>
+</td>
+</tr>
+<tr>
+<td>
+<%= label_tag :picture1, "image next" %>
+</td>
+    <td>
+<%= file_field_tag 'picture1', class: 'active_admin' %>
+</td>
+</tr>
+<tr>
+<td>
+<%= label_tag :picture2, "image next" %>
+</td>
+    <td>
+<%= file_field_tag 'picture2', class: 'active_admin' %> 
+</td>
+</tr>
+<tr>
+<td>
     <%= label_tag :articul, "articul" %>
-    <%= text_field_tag :articul, '', class: 'dd' %>
-	</br>
+    </td>
+    <td>
+    <%= text_field_tag :articul, '', class: 'active_admin_text' %>
+</td>
+</tr>
+<tr>
+<td>
     <%= label_tag :favourite, "favourite" %>
-    <%= text_field_tag :favourite, '', class: 'dd' %>
-    </br>
+      </td>
+    <td>  
+    <%= text_field_tag :favourite, '', class: 'active_admin_text' %>
+</td>
+</tr>
+<tr>
+<td>
 
-  <%= submit_tag "add product", class: 'batn' %>
+  <%= submit_tag "add product", class: 'active_admin' %>
+  </td>
+  <td>
+  <%= link_to 'cancel', '/admin/products', class: 'active_admin', style:'padding:16px' %>
+  </td>
+  </tr>
+  </table>
 <% end %>
 
-<%= link_to 'cancel', '/admin/products' %>
+
 
 
 
 <script>
 var objSel = document.getElementById("category");
-
-  //Если есть выбранный элемент, отобразить его значение (свойство value)
-
 
 
 jQuery(function($) {
@@ -69,8 +133,3 @@ $("#result_ajax").html(result);
 });
 
 </script>
-
-
-
-
-
