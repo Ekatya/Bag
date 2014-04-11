@@ -5,11 +5,11 @@
 <% odj.each do |sub| %>
 <% if _id.to_s==sub.id.to_s %>
 
- <%= link_to sub.name, { controller: goto_controller, action: goto_action , id: sub.id }, class: 'menu_present', id2: _id2 %>
+ <%= link_to sub.name, { controller: goto_controller, action: goto_action , id: sub.id, id2: _id2 }, class: 'menu_present' %>
 
 <% else %>
 
- <%= link_to sub.name, controller: goto_controller, action: goto_action, id: sub.id , id2: _id2 %>
+ <%= link_to sub.name, { controller: goto_controller, action: goto_action, id: sub.id , id2: _id2 }, class: 'menu' %>
 
 <% end %>
 <% end %>

@@ -1,0 +1,7 @@
+<% @products.each do |prod| %>
+
+  <%= link_to image_tag(prod.picture_url(:thumb) || 'product_blank.gif'), prod %>
+  <br> <br>
+   <%= prod.category_id  %>  <%= prod.subcategory_id %>
+    <br> <br>
+<% end %>

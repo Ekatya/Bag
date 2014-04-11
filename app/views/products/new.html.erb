@@ -5,9 +5,9 @@
 <br>
 
 
-<div class='active_admin_div'>
-Products add
-</div>
+  <div class='active_admin_div'>
+  Products add
+  </div>
 <br>
 <br>
 <%= form_tag({action: :create, controller: :products}, multipart: true) do %> 
@@ -101,35 +101,3 @@ Products add
   </tr>
   </table>
 <% end %>
-
-
-
-
-
-<script>
-var objSel = document.getElementById("category");
-
-
-jQuery(function($) {
-$("#category").change( function(){
-
-objSel1=objSel.options[objSel.selectedIndex].value;
-
-$.ajax({
-
- url: 'select',
-data: "category_id_="+objSel1,
- type: 'POST',
-success: function(result){
-//alert('123');
-$("#result_ajax").html(result);
-
-}
-
-
-});
-
-});
-});
-
-</script>

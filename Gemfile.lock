@@ -190,7 +190,6 @@ DEPENDENCIES
   rails_12factor (= 0.0.2)
   rmagick
   russian (~> 0.6.0)
-  sass-rails (~> 4.0.0)
   sdoc
   sqlite3
   turbolinks

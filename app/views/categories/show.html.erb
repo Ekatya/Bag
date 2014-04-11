@@ -6,8 +6,6 @@
 <br> <br>
 
 
-<% @products.each do |prod| %>
- <%= link_to prod.name, prod %>  <%= prod.category_id  %>  <%= prod.subcategory_id %><br>
-<% end %>
+<%= render 'products/product' %>
 <br> <br>
 <%= will_paginate @products %>
