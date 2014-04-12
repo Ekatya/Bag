@@ -2,16 +2,26 @@
 <html>
 <head>
   <title>Bag</title>
-  <%= stylesheet_link_tag    "application", "css", media: "all", "data-turbolinks-track" => true %>
+
+
+  <%= stylesheet_link_tag    "application", "css","main", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+<script type="text/javascript" src="/assets/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.ui-slider.js"></script>
+<script type="text/javascript" src="/assets/jquery.main.js"></script>
+
+
 </head>
 <body>
 
 <div class='body'>
+<div class='header'>
+</div>
 <%= yield %>
-</br></br></br></br>
 <%= render partial: "users/user_sign_in_up" %>
+</br></br></br></br>
 </div>
 </body>
 </html>

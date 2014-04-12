@@ -1,23 +1,26 @@
-<%= link_to "Зарегистрироваться", new_user_path %>
-</br></br>
-
+<div class='sign_in'>
+<%= link_to "Регистрация", new_user_path, class: 'reg_a' %>
 
 <% if session[:user_id] %>
 Неllo, <%= current_user.name %>
-<%= link_to "Выход", :sessions_destroy %>
+<%= link_to "Выход", :sessions_destroy, class: 'button' %>
 
 <% else %>
 
 <%= form_tag(controller: "sessions", action: "create") do  %>
 <%= label_tag "Email" %>
-<%= text_field_tag 'email', nil, class: 'text' %>
+<%= text_field_tag 'email', nil, class: 'sing_email' %>
+</br>
 <%= label_tag "Пароль" %>
-<%= password_field_tag 'password', nil, class: 'text' %>
-<%= submit_tag "Войти" %>
+<%= password_field_tag 'password', nil, class: 'sing_email' %>
+<%= submit_tag "Войти", class: 'button' %>
 <% end %>
+
+
 
 <% if flash[:error]==true %>
 <span class='error'> не правильный пароль или email </span>
 <% end %>
 
 <% end %>
+</div>

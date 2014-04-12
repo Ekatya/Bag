@@ -1,7 +1,61 @@
-<% @products.each do |prod| %>
+<div class='find'>
 
-  <%= link_to image_tag(prod.picture_url(:thumb) || 'product_blank.gif'), prod %>
-  <br> <br>
-   <%= prod.category_id  %>  <%= prod.subcategory_id %>
-    <br> <br>
+<div class="main">
+Цена:
+
+
+<script>
+max_zena_=<%= @max_zena %>;
+min_zena_=<%= @min_zena %>;
+</script>
+
+
+<%= form_tag request.fullpath, method: "get" do  %> 
+
+			<div class="formCost">
+				<label for="minCost">Цена: от</label> <input type="text" id="minCost" name="min_zena" value="<%= @min_zena %>" />
+				<label for="maxCost">до</label> <input type="text" id="maxCost" name="max_zena" value="<%= @max_zena %>" />
+<input type="hidden" name="id2" value="<%= @category_id %>" />
+			</div>
+			<div class="sliderCont">
+					<div id="slider"></div>
+			</div>
+			<%= submit_tag "Применить", class: 'batn' %>
+		<% end %>
+	</div>
+
+</div>
+<table class='product'>
+<tr>
+<% kol_tr=0 %>
+
+<% @products.each do |prod| %>
+<td>
+<div class='product_body'>
+
+<div class='product_image'>
+  <%= link_to image_tag(prod.picture_url(:thumb) || 'product_blank.gif', class: 'thumb'), prod %>
+</div>
+<div class='product_name'>
+<%= link_to prod.name, prod, class: 'product_name' %>
+</div>
+<div class='product_price'>
+<%= number_to_currency(prod.price, precision: 2, unit: "грн.", separator: ",", delimiter: " ", format: "%n %u") %>
+</div>
+<div>
+<%= link_to 'в корзину', prod, class: 'button' %>
+</div>
+
+</div>
+</td>
+
+    <% kol_tr+=1 %>
+    <% if kol_tr==3 %>
+    <% kol_tr=0 %>
+    </tr><tr>
+    <% end %>
+
 <% end %>
+
+</tr>
+</table>

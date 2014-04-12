@@ -8,6 +8,16 @@ class ApplicationController < ActionController::Base
 	
 	helper_method :current_user
 
-	Number_product_1=10; #кол-во выводимых продуктов в категориях
-    Number_product_2=10; #кол-во выводимых продуктов в подкатегориях
+	def max_zena(obj)
+	obj.all.map {|a| a.price }.max
+	end
+	helper_method :max_zena
+
+	def min_zena(obj)
+	obj.all.map {|a| a.price }.min
+	end
+	helper_method :min_zena
+
+	Number_product_1=12; #кол-во выводимых продуктов в категориях
+    Number_product_2=12; #кол-во выводимых продуктов в подкатегориях
 end
