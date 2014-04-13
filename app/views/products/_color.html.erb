@@ -1,0 +1,9 @@
+<div style='width:200px;'>
+<% Color.all.each do |k| %>
+
+<div style="<%= k.name %>" class='color'>
+<%= radio_button_tag(:color, k.id) %>
+</div>
+
+<% end %>
+</div>

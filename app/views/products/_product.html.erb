@@ -20,9 +20,16 @@ min_zena_=<%= @min_zena %>;
 			<div class="sliderCont">
 					<div id="slider"></div>
 			</div>
-			<%= submit_tag "Применить", class: 'batn' %>
+<div style='width:200px;height:100px'>Цвет: </div>
+
+<%= render 'products/color' %>
+
+
+			<%= submit_tag "Применить", class: 'batn', style: 'margin-top:20px' %>
 		<% end %>
-	</div>
+
+
+</div>
 
 </div>
 <table class='product'>
@@ -41,6 +48,9 @@ min_zena_=<%= @min_zena %>;
 </div>
 <div class='product_price'>
 <%= number_to_currency(prod.price, precision: 2, unit: "грн.", separator: ",", delimiter: " ", format: "%n %u") %>
+</div>
+<div>
+<%= prod.color_id %>
 </div>
 <div>
 <%= link_to 'в корзину', prod, class: 'button' %>

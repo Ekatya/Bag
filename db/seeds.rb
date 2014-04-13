@@ -30,7 +30,29 @@ def rnd_subcategory_and_category
 	end
 
 
-50.times {k=rnd_subcategory_and_category
- Product.create( name: 'a'+rand(0..10).to_s , price: rand(1..100) , category_id: k[0] , subcategory_id: k[1] , description: 'Практичная женская сумка от David Jones. Аксессуар черного цвета выполнен из искусственной кожи. Детали: внутренний и внешний карманы, серебристая фурнитура, декоративная вставка спереди, подвеска с бахромой.' , articul: rand(0..1000).to_s+rand(0..1000).to_s , favourite: rand(0..100) ) }
+#50.times {k=rnd_subcategory_and_category
+ #Product.create( name: 'a'+rand(0..10).to_s , price: rand(1..100) , category_id: k[0] , subcategory_id: k[1] , description: 'Практичная женская сумка от David Jones. Аксессуар черного цвета выполнен из искусственной кожи. Детали: внутренний и внешний карманы, серебристая фурнитура, декоративная вставка спереди, подвеска с бахромой.' , articul: rand(0..1000).to_s+rand(0..1000).to_s , favourite: rand(0..100) ) }
 
-	
+Color.create(name: 'background:#000000')
+Color.create(name: 'background:#f4be92')
+Color.create(name: 'background:#ecd6be')
+Color.create(name: 'background:#848484')
+Color.create(name: 'background:#ffffff')
+Color.create(name: 'background:#ff0000')
+Color.create(name: 'background:#c43b12')
+Color.create(name: 'background:#ff7f50')
+Color.create(name: 'background:#fa5713')
+Color.create(name: 'background:#f4be92')
+Color.create(name: 'background:#6d3600')
+Color.create(name: 'background:#ecd6be')
+Color.create(name: 'background:#fcdd76')
+Color.create(name: 'background:#808000')
+Color.create(name: 'background:#ffff00')
+Color.create(name: 'background:#bffa32')
+Color.create(name: 'background:#146b00')
+Color.create(name: 'background:#08e8de')
+Color.create(name: 'background:#54caf8')
+Color.create(name: 'background:#0a56d4')
+Color.create(name: 'background:#b166ca')
+Color.create(name: 'background:#fd8cc4')
+Color.create(name: 'background:#711020')

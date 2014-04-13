@@ -50,6 +50,7 @@ u.price=params[:price]
 u.description=params[:description]
 u.articul=params[:articul]
 u.favourite=params[:favourite]
+u.color_id=params[:color]
 u.save!
 redirect_to '/admin/products/' + u.id.to_s
 #render :json  => u.picture.url

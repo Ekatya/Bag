@@ -74,7 +74,6 @@
 <%= file_field_tag 'picture2', class: 'active_admin' %> 
 </td>
 </tr>
-<tr>
 <td>
     <%= label_tag :articul, "articul" %>
     </td>
@@ -88,6 +87,13 @@
       </td>
     <td>  
     <%= text_field_tag :favourite, '', class: 'active_admin_text' %>
+</td>
+</tr>
+<tr>
+<td>Цвет
+</td>
+<td>
+<%= render 'products/color' %>
 </td>
 </tr>
 <tr>
