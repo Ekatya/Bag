@@ -5,6 +5,19 @@ body{
  	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
  }
 
+.image_root{
+	width:300px;
+	height:400px;
+	border:1px solid white;
+	padding:5px;
+	margin:5px;
+}
+
+div.on_root{
+	margin:30px 0 0 20px;
+	position:relative;
+}
+
 div.logo{
 	font-family:'comic sans ms';
 	font-size: 30px;
@@ -28,7 +41,7 @@ background: url('/i3.png');
 
 div.sign_in{
 position: absolute;
-left: 800px;
+left: 700px;
 top: 10px;
 color: rgb(0, 149, 235);
 }
@@ -38,7 +51,7 @@ color: rgb(0, 149, 235);
 }
 
 div.header{
-	height:100px;
+	height:110px;
 	margin-bottom: 10px;
 	background-image: url('/i1.jpeg');
 }

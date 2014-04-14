@@ -14,9 +14,12 @@
 <div class='body'>
 <div class='header'>
 <div class='logo'>YOUR NEW BAG</div>
+<div class='on_root'> <%= link_to 'на главную', root_path %>&emsp;&emsp;
+<%= link_to 'o нас', root_path %>
+</div>
 </div>
 <%= yield %>
-<% if @new!=false %>
+<% if @sign_in_view!=false %>
 <%= render partial: "users/user_sign_in_up" %>
 <% end %>
 </div>

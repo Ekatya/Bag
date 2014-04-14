@@ -8,7 +8,7 @@
 <% else %>
 
 <%= form_tag(controller: "sessions", action: "create") do  %>
-<%= label_tag "Email" %>
+<%= label_tag "Email" %>&emsp;
 <%= text_field_tag 'email', nil, class: 'sing_email' %>
 </br>
 <%= label_tag "Пароль" %>
@@ -19,7 +19,7 @@
 
 
 <% if flash[:error]==true %>
-<span class='error'> не правильный пароль или email </span>
+<span class='error'> неправильный пароль или email </span>
 <% end %>
 
 <% end %>

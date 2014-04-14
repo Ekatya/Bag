@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 	layout "some"
 
 	def new
-		@new=false
+		@sign_in_view=false
 		@user = User.new
 	end
 

@@ -22,5 +22,10 @@ class CategoriesController < ApplicationController
         #Post.paginate(:page => params[:page], :per_page => 30)   
 	end
 
+	def rnd_
+	n=rand(1..9)
+	'/'+n.to_s+'.jpg'
+	end
+	helper_method :rnd_
 
 end

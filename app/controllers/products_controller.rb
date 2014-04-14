@@ -28,7 +28,8 @@ render layout: "some"
 
 
     def new
-    @product=Product.new
+  @sign_in_view=false
+  @product=Product.new
 	render layout: "some"
 	
     end
