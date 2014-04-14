@@ -2,13 +2,23 @@
 <html>
 <head>
   <title>Bag</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application","product_show", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript" src="/assets/mootools.js"></script>
+		<script type="text/javascript" src="/assets/moocicle.js"></script>
+
 </head>
 <body>
 <div class='body'>
+<div class='header'>
+<div class='logo'>YOUR NEW BAG</div>
+</div>
 <%= yield %>
+<% if @new!=false %>
+<%= render partial: "users/user_sign_in_up" %>
+<% end %>
 </div>
 </body>
 </html>

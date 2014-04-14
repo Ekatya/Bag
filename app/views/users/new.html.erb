@@ -1,37 +1,72 @@
+<!------------------------>
 
+<center>
 
-<%= form_for @user, url: {action: "create", remote: true } do |f| %> 
+<span class='text_span'> Регистрация </span>
+<br><br>
+<%= form_for @user, url: {action: "create", remote: true } do |f| %>
+<table style='border:1px solid white;padding:30px;'>
+<tr>
+<td> 
     <%= f.label :name, "Имя" %>
+</td>
+<td>
     <%= f.text_field :name, class: 'dd' %>
-    </br>
+</td>
+</tr>
+<tr>
+<td> 
     <%= f.label :email, "Email" %>
+</td>
+<td>
     <%= f.text_field :email, class: 'dd' %>
-    </br>
+</td>
+</tr>
+<tr>
+<td> 
     <%= f.label :password, "Пароль" %>
+</td>
+<td>
     <%= f.password_field :password, class: 'dd' %>
-    </br>
-    <%= f.label :password_confirmation, "Еще раз пароль" %>
+</td>
+</tr>
+<tr>
+<td> 
+    <%= f.label :password_confirmation, "Еще раз пароль" %>&emsp;&emsp;
+</td>
+<td>
     <%= f.password_field :password_confirmation, class: 'dd' %>
-    </br>
-  <%= f.submit "Зарегистрироваться", class: 'batn' %>
-<% end %>
-
-
-</br>
-</br>
+</td>
+</tr>
+<tr>
+<td colspan="2"> 
+<br>
+  <%= f.submit "Зарегистрироваться", class: 'button' %>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left" style="color:red">
 <% if @user.errors.messages[:name].length!=0  %>
 не правильное или занятое имя пользователя
-<% end %>
 </br>
+<% end %>
+
 
 <% if @user.errors.messages[:password].length!=0  %>
 пароль или подтверждение не верные
 </br>
 возможно длинна пароля меньше 6 символов
-<% end %>
 </br>
+<% end %>
 
 <% if @user.errors.messages[:email].length!=0  %>
 email существует, либо имеет не верный формат
 <% end %>
+
+</td>
+</tr>
+</table>
+<% end %>
+
 </br>
+</center>

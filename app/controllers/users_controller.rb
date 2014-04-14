@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 	layout "some"
 
 	def new
+		@new=false
 		@user = User.new
-
 	end
 
   	def create
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
 		if @user.save
     		session[:user_id] = @user.id
-        	redirect_to categories_path, notice: 'registered'
+        	redirect_to categories_path
 		else
         	render action: "new" 
 		end

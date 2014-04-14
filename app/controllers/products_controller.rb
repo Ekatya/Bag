@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
 	end
 
 	def show
+
 		@categories=Category.all
 
 		@product=Product.where('id =?', params[:id])
@@ -12,8 +13,11 @@ class ProductsController < ApplicationController
 @product.each do |prod|
 @category_id=prod.category_id
 @subcategory_id=prod.subcategory_id
-@subcategories=Subcategory.all.where('category_id =?', @category_id)
 end
+
+@subcategories=Subcategory.all.where('category_id =?', @category_id)
+@com=Com.where('product_id==?', params[:id])
+render layout: "some"
 	#@category_id=@product.category_id
   	#@categories=Category.all
   	#@subcategory_id=@product.subcategory_id

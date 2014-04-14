@@ -5,6 +5,12 @@ body{
  	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
  }
 
+div.logo{
+	font-family:'comic sans ms';
+	font-size: 30px;
+	padding: 10px 0 0 20px;
+	text-shadow: 3px 3px 0px #cd00cd;
+}
 div.color{
 	float: left;
 	position: relative;
@@ -15,12 +21,14 @@ div.body{
 	position: relative;
 margin:0 auto;
 width:1024px;
+padding: 0 4px 0 4px;
+background: url('/i3.png');
 }
 
 
 div.sign_in{
 position: absolute;
-left: 700px;
+left: 800px;
 top: 10px;
 color: rgb(0, 149, 235);
 }
@@ -31,6 +39,8 @@ color: rgb(0, 149, 235);
 
 div.header{
 	height:100px;
+	margin-bottom: 10px;
+	background-image: url('/i1.jpeg');
 }
 
 div.product_body{
@@ -104,35 +114,35 @@ div.product_name{
 	margin-bottom: 8px;
 }
 
-a.menu{
-margin-right: 5px;
-font-size: 14px;
-display: block;
-float: left;
-padding: 6px 11px;
-color: rgb(96, 96, 96);
+div.menu{
+text-align: center;
+padding-top: 6px;
 }
 
-a.menu:hover{
+a.menu{
+	font-weight: bold;
+margin-right: 5px;
+font-size: 16px;
+padding: 6px 11px;
+color: rgb(96, 96, 96);
 border: 1px solid rgb(213, 213, 213);
 background-color: rgb(255, 255, 255);
 padding: 5px 10px 6px;
 border-radius: 20px 20px 20px 20px;
 text-decoration: none;
+}
+
+a.menu:hover{
+border: 1;
+background:none;
 }
 
 a.menu_present{
 margin-right: 5px;
-font-size: 14px;
-display: block;
-float: left;
+font-size: 16px;
+font-weight: bold;
 padding: 6px 11px;
 color: rgb(96, 96, 96);
-border: 1px solid rgb(213, 213, 213);
-background-color: rgb(255, 255, 255);
-padding: 5px 10px 6px;
-border-radius: 20px 20px 20px 20px;
-text-decoration: none;
 }
 
 .active_admin{

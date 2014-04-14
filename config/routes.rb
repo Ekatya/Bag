@@ -15,10 +15,11 @@ Bag::Application.routes.draw do
  end
 end
 
- resources :subcategories 
+resources :subcategories 
 resources :products
 resources :sessions
 resources :users
+resources :coms
 
 match 'sessions_destroy',    to: 'sessions#destroy',    via: :all
 

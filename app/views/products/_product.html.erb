@@ -50,9 +50,6 @@ min_zena_=<%= @min_zena %>;
 <%= number_to_currency(prod.price, precision: 2, unit: "грн.", separator: ",", delimiter: " ", format: "%n %u") %>
 </div>
 <div>
-<%= prod.color_id %>
-</div>
-<div>
 <%= link_to 'в корзину', prod, class: 'button' %>
 </div>
 

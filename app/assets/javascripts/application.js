@@ -15,6 +15,8 @@
 // require turbolinks 
 //конфликт с выбором цены
 
+
+
 jQuery(function($) {
 $("#category").change( function(){
 var objSel = document.getElementById("category");

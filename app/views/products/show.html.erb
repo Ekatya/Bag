@@ -1,22 +1,71 @@
+
 <%= render 'categories/menu' %>
 <% menu_next(@categories, @category_id, "categories", "show", '') %>
 
 
-<br> <br>
+<br>
 
 <% menu_next(@subcategories, @subcategory_id, "subcategories", "show", @category_id) %>
 
 
-<br><br>
+<br>
+
+<%= render 'product_show' %>
 
 
+<!------------------comments---------------->
+<div class='comment'>
 
-<% @product.each do|prod| %>
-<%= prod.name %><br><br>
-<%= prod.price %><br><br>
-<%= prod.picture %><br><br>
-<%= prod.description %><br><br>
-<%= prod.favourite %>
+<% @com.each do |b| %>
+<br>
+<span class='text_span'><%= b.name_user %>:</span>
+<%= b.body %>
+<% if current_user and current_user.name==b.name_user %>
+<% url=Com.find(b.id) %>
+
+<%= link_to "x", {controller: "coms",  action: "destroy",id: b.id, id_product: params[:id], name: b.name_user},:method => :delete , class: 'delet' %>
+</br>
+
 
 <% end %>
+
+<% end %>
+<br><br>
+
+<!---------------------------------->
+<% if current_user %>
+
+<%= form_for Com.new do |f| %> 
+<table>
+<tr>
+<td>
+    <%= f.label :body, "Коментировать" %>
+</td>
+</tr>
+<tr>
+<td>
+    <%= f.text_area :body, class: 'body_text' %>
+
+<%= f.hidden_field :user_id, :value => current_user.id %>
+<%= f.hidden_field :name_user, :value => current_user.name %>
+<%= f.hidden_field :product_id, :value => params[:id] %>
+
+</td>
+</tr>
+<tr>
+<td>
+  <%= f.submit %>
+  </td>
+</tr>
+</table>
+<% end %>
+
+
+<br>
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+
+<% end %>
+</div>
 

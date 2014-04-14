@@ -2,6 +2,8 @@
 <!------------------------------>
 <% def menu_next(odj, _id, goto_controller, goto_action, _id2) %>
 
+<div class='menu'>
+
 <% odj.each do |sub| %>
 <% if _id.to_s==sub.id.to_s %>
 
@@ -13,4 +15,8 @@
 
 <% end %>
 <% end %>
+
+</div>
 <% end %>
+
+

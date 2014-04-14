@@ -8,6 +8,7 @@ class Product < ActiveRecord::Base
 	mount_uploader :picture2, PictureUploader
 
 	belongs_to :color
+	has_many :com
 	#validates_presence_of :name, :subcategory_id, :category_id, 
 
 end

@@ -12,4 +12,6 @@ validates :name, :uniqueness => true, :format => {with: /[a-zA-ZА-Яa-я_1-90]/
     too_long: "слишком длинный",
     too_short: "должен состоять из 5 символов и более"
 
+    has_many :com 
+
 end

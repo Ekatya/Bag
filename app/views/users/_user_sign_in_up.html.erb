@@ -1,5 +1,5 @@
 <div class='sign_in'>
-<%= link_to "Регистрация", new_user_path, class: 'reg_a' %>
+<%= link_to "Регистрация", new_user_path, class: 'reg_a' %><br>
 
 <% if session[:user_id] %>
 Неllo, <%= current_user.name %>

@@ -1,16 +1,18 @@
 <%= render 'categories/menu' %>
 <% menu_next(@categories, @category_id, "categories", "show", '') %>
-<br> <br>
+<br> 
 <!------------------------>
 
 <% menu_next(@subcategories, @subcategory_id, "subcategories", "show", @category_id) %>
 
 
-<br><br>
+<br>
 
 <!------------------------>
 
 <%= render 'products/product' %>
 
 <br> <br>
+<center>
 <%= will_paginate @products %>
+</center>

@@ -1,0 +1,41 @@
+<div class='product_show'>
+<% @product.each do|prod| %>
+
+<div class='name_show'><%= prod.name %></div>
+
+<div class='product_img'>
+
+
+	<ul class="product" id="moocircle">
+
+	<li style="z-index: 301;">
+		<%= image_tag(prod.picture_url || 'product_blank.gif', class: 'image_tag') %>
+	</li>
+	<li style="z-index: 302;">
+		<%= image_tag(prod.picture1_url || 'product_blank.gif', class: 'image_tag') %>
+	</li>
+	<li style="z-index: 303;">
+		<%= image_tag(prod.picture2_url || 'product_blank.gif', class: 'image_tag') %>
+	</li>
+
+	</ul>
+
+
+
+</div>
+
+<div class='right_div'>
+
+Описание:
+<div class='description_show'><%= prod.description %></div>
+
+<div class='price_show'>
+Цена:
+<%= number_to_currency(prod.price, precision: 2, unit: "грн.", separator: ",", delimiter: " ", format: "%n %u") %>
+
+</div>
+
+</div>
+
+<% end %>
+</div>
