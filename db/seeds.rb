@@ -1,33 +1,41 @@
-# -*- coding: utf-8 -*-
-#Category.create(id: 1, name: "женские", position: 1)
-#Category.create(id: 2, name: "мужские", position: 2)
-#Category.create(id: 3, name: "дорожные", position: 3)
-#Category.create(id: 4, name: "спортивные", position: 4)
-#Category.create(id: 5, name: "арт", position: 5)
+ # -*- coding: utf-8 -*-
+Category.create(id: 1, name: "женские", position: 1)
+Category.create(id: 2, name: "мужские", position: 2)
+Category.create(id: 3, name: "дорожные", position: 3)
+Category.create(id: 4, name: "спортивные", position: 4)
+Category.create(id: 5, name: "арт", position: 5)
 
-#Subcategory.create(id: 1, name: "деловые", position: 1,  category_id: 1)
-#Subcategory.create(id: 2, name: "саквояжи", position: 2, category_id: 1)
-#Subcategory.create(id: 3, name: "клатчи", position: 3, category_id: 1)
-#Subcategory.create(id: 4, name: "через плечо", position: 4, category_id: 1)
-#Subcategory.create(id: 5, name: "пляжные", position: 5, category_id: 1)
-#Subcategory.create(id: 6, name: "портфели", position: 1, category_id: 2)
-#Subcategory.create(id: 7, name: "через плечо", position: 2, category_id: 2)
-#Subcategory.create(id: 8, name: "барсетки", position: 3, category_id: 2)
-#Subcategory.create(id: 10, name: "на колесах", position: 1, category_id: 3)
-#Subcategory.create(id: 11, name: "дорожные чемоданы", position: 2, category_id: 3)
+Subcategory.create(id: 1, name: "деловые", position: 1,  category_id: 1)
+Subcategory.create(id: 2, name: "саквояжи", position: 2, category_id: 1)
+Subcategory.create(id: 3, name: "клатчи", position: 3, category_id: 1)
+Subcategory.create(id: 4, name: "через плечо", position: 4, category_id: 1)
+Subcategory.create(id: 5, name: "пляжные", position: 5, category_id: 1)
+Subcategory.create(id: 6, name: "портфели", position: 1, category_id: 2)
+Subcategory.create(id: 7, name: "через плечо", position: 2, category_id: 2)
+Subcategory.create(id: 8, name: "барсетки", position: 3, category_id: 2)
+Subcategory.create(id: 9, name: "на колесах", position: 1, category_id: 3)
+Subcategory.create(id: 10, name: "дорожные чемоданы", position: 2, category_id: 3)
+Subcategory.create(id: 11, name: "дорожные сумки", position: 3, category_id: 3)
+Subcategory.create(id: 12, name: "рюкзаки", position: 1, category_id: 4)
+Subcategory.create(id: 13, name: "Adidas", position: 2, category_id: 4)
+Subcategory.create(id: 14, name: "pазмер XXL", position: 3, category_id: 4)
+Subcategory.create(id: 15, name: "c принтом", position: 1, category_id: 5)
+Subcategory.create(id: 16, name: "хенд-мейд", position: 2, category_id: 5)
+Subcategory.create(id: 17, name: "с аппликацией", position: 3, category_id: 5)
+Subcategory.create(id: 18, name: "молодежные", position: 4, category_id: 5)
 
-def rnd_subcategory_and_category
-	dd2=[] 
-	category_=rand(1..4)
-	dd1=Category.find(category_) 
-		dd1.subcategories.each do |dd| 
-		dd2[dd2.length]=dd.id 
-		end 
-	m=[]
-	m[0]=category_
-	m[1]=dd2.sample
-	m	
-	end
+#def rnd_subcategory_and_category
+	#dd2=[] 
+	#category_=rand(1..4)
+	#dd1=Category.find(category_) 
+		#dd1.subcategories.each do |dd| 
+		#dd2[dd2.length]=dd.id 
+		#end 
+	#m=[]
+	#m[0]=category_
+	#m[1]=dd2.sample
+	#m	
+	#end
 
 
 #50.times {k=rnd_subcategory_and_category
@@ -56,3 +64,5 @@ Color.create(name: 'background:#0a56d4')
 Color.create(name: 'background:#b166ca')
 Color.create(name: 'background:#fd8cc4')
 Color.create(name: 'background:#711020')
+
+User.create(id: 1, name: "den", password_digest: "111111", email: "den@mail.ru")
