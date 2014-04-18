@@ -20,6 +20,9 @@ resources :products
 resources :sessions
 resources :users
 resources :coms
+resources :carts
+resources :items
+resources :orders
 
 match 'sessions_destroy',    to: 'sessions#destroy',    via: :all
 

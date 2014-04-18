@@ -1,9 +1,9 @@
 
 <%= render 'menu' %>
-<% menu_next(@categories, @category_id, "categories", "show", -1) %>
+<% menu_next(@categories, @category_id, "categories", "show", '') %>
 <br> 
 
-<% menu_next(@subcategories, -1, "subcategories", "show", @category_id) %>
+<% menu_next(@subcategories, '', "subcategories", "show", @category_id) %>
 <br> 
 
 

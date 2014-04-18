@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class ApplicationController < ActionController::Base
   
     protect_from_forgery with: :exception
@@ -17,6 +18,18 @@ class ApplicationController < ActionController::Base
 	obj.all.map {|a| a.price }.min
 	end
 	helper_method :min_zena
+
+	def current_cart
+
+	if session[:cart_id]==Cart.find_by(id: session[:cart_id]).id
+		cart = Cart.find_by(session[:cart_id])
+		else
+		cart = Cart.create
+    	session[:cart_id] = cart.id
+		end
+		cart
+	end
+	helper_method :current_cart
 
 	Number_product_1=12; #кол-во выводимых продуктов в категориях
     Number_product_2=12; #кол-во выводимых продуктов в подкатегориях

@@ -13,6 +13,13 @@ body{
 	margin:5px;
 }
 
+div.empty{
+	height:300px;
+	padding-top: 20px;
+	color: rgb(0, 149, 235);
+	font-weight: bold;
+	text-align:center;
+}
 div.on_root{
 	margin:30px 0 0 20px;
 	position:relative;
@@ -117,6 +124,7 @@ div.product_image{
 	border:1px solid rgb(237, 237, 237);
 	margin-bottom: 8px;
 	text-align: center;
+		height:200px;
 }
 
 div.product_price{

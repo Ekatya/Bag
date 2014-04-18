@@ -1,10 +1,12 @@
   # -*- coding: utf-8 -*-
+  Category.delete_all
 Category.create(id: 1, name: "женские", position: 1)
 Category.create(id: 2, name: "мужские", position: 2)
 Category.create(id: 3, name: "дорожные", position: 3)
 Category.create(id: 4, name: "спортивные", position: 4)
 Category.create(id: 5, name: "арт", position: 5)
 
+  Subcategory.delete_all
 Subcategory.create(id: 1, name: "деловые", position: 1,  category_id: 1)
 Subcategory.create(id: 2, name: "саквояжи", position: 2, category_id: 1)
 Subcategory.create(id: 3, name: "клатчи", position: 3, category_id: 1)
@@ -24,6 +26,7 @@ Subcategory.create(id: 16, name: "хенд-мейд", position: 2, category_id: 
 Subcategory.create(id: 17, name: "с аппликацией", position: 3, category_id: 5)
 Subcategory.create(id: 18, name: "молодежные", position: 4, category_id: 5)
 
+Product.delete_all
 Product.create(id: 1, name: "Кожаная женская зеленая", price: 350.0, category_id: 1, subcategory_id: 1, picture: "1b25485fc108a20e170113652ceae0bd.jpg", description: "", articul: "20", favourite: nil, picture1: "5eeb4e17a76523a97b4a65d4ed589789.jpg", picture2: "b0d3524b050080f63237f8413e09dcdc.jpg", color_id: 17)
 
 Product.create(id: 2, name: "Кожаная кирпичного цвета", price: 400.0, category_id: 1, subcategory_id: 1, picture: "0d80df278fd8af35d66ab0d9c43e71cb.jpg", description: "", articul: "21", favourite: nil, picture1: "bd93a53edbdf4ddc575e9a505b8112d2.jpg", picture2: "d09c8e6a315a38e1fa805f4280593aa5.jpg", color_id: 9)
@@ -65,29 +68,30 @@ Product.create(id: 10, name: "Кожаная белая Assa", price: 1650.0, ca
 
 #50.times {k=rnd_subcategory_and_category
  #Product.create( name: 'a'+rand(0..10).to_s , price: rand(1..100) , category_id: k[0] , subcategory_id: k[1] , description: 'Практичная женская сумка от David Jones. Аксессуар черного цвета выполнен из искусственной кожи. Детали: внутренний и внешний карманы, серебристая фурнитура, декоративная вставка спереди, подвеска с бахромой.' , articul: rand(0..1000).to_s+rand(0..1000).to_s , favourite: rand(0..100) ) }
+Color.delete_all
+Color.create(id: 1, name: 'background:#000000')
+Color.create(id: 2, name: 'background:#f4be92')
+Color.create(id: 3, name: 'background:#ecd6be')
+Color.create(id: 4, name: 'background:#848484')
+Color.create(id: 5, name: 'background:#ffffff')
+Color.create(id: 6, name: 'background:#ff0000')
+Color.create(id: 7, name: 'background:#c43b12')
+Color.create(id: 8, name: 'background:#ff7f50')
+Color.create(id: 9, name: 'background:#fa5713')
+Color.create(id: 10, name: 'background:#f4be92')
+Color.create(id: 11, name: 'background:#6d3600')
+Color.create(id: 12, name: 'background:#ecd6be')
+Color.create(id: 13, name: 'background:#fcdd76')
+Color.create(id: 14, name: 'background:#808000')
+Color.create(id: 15, name: 'background:#ffff00')
+Color.create(id: 16, name: 'background:#bffa32')
+Color.create(id: 17, name: 'background:#146b00')
+Color.create(id: 18, name: 'background:#08e8de')
+Color.create(id: 19, name: 'background:#54caf8')
+Color.create(id: 20, name: 'background:#0a56d4')
+Color.create(id: 21, name: 'background:#b166ca')
+Color.create(id: 22, name: 'background:#fd8cc4')
+Color.create(id: 23, name: 'background:#711020')
 
-Color.create(name: 'background:#000000')
-Color.create(name: 'background:#f4be92')
-Color.create(name: 'background:#ecd6be')
-Color.create(name: 'background:#848484')
-Color.create(name: 'background:#ffffff')
-Color.create(name: 'background:#ff0000')
-Color.create(name: 'background:#c43b12')
-Color.create(name: 'background:#ff7f50')
-Color.create(name: 'background:#fa5713')
-Color.create(name: 'background:#f4be92')
-Color.create(name: 'background:#6d3600')
-Color.create(name: 'background:#ecd6be')
-Color.create(name: 'background:#fcdd76')
-Color.create(name: 'background:#808000')
-Color.create(name: 'background:#ffff00')
-Color.create(name: 'background:#bffa32')
-Color.create(name: 'background:#146b00')
-Color.create(name: 'background:#08e8de')
-Color.create(name: 'background:#54caf8')
-Color.create(name: 'background:#0a56d4')
-Color.create(name: 'background:#b166ca')
-Color.create(name: 'background:#fd8cc4')
-Color.create(name: 'background:#711020')
-
+User.delete_all
 User.create(id: 1, name: "den", password_digest: "111111", email: "den@mail.ru")

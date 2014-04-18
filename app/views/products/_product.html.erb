@@ -13,9 +13,12 @@ min_zena_=<%= @min_zena %>;
 <%= form_tag request.fullpath, method: "get" do  %> 
 
 			<div class="formCost">
-				<label for="minCost">Цена: от</label> <input type="text" id="minCost" name="min_zena" value="<%= @min_zena %>" />
-				<label for="maxCost">до</label> <input type="text" id="maxCost" name="max_zena" value="<%= @max_zena %>" />
-<input type="hidden" name="id2" value="<%= @category_id %>" />
+				<label for="minCost">Цена: от</label> <input type="text" id="minCost" name="select_min_zena" value="<%= @min_zena %>" />
+				<label for="maxCost">до</label> <input type="text" id="maxCost" name="select_max_zena" value="<%= @max_zena %>" />
+<input type="hidden" name="sub" value="<%= @category_id %>" />
+
+<input type="hidden" name="max_zena" value="<%= @max_zena %>" />
+<input type="hidden" name="min_zena" value="<%= @min_zena %>" />
 			</div>
 			<div class="sliderCont">
 					<div id="slider"></div>
@@ -29,16 +32,45 @@ min_zena_=<%= @min_zena %>;
 		<% end %>
 
 
+<!------------------find---------------->
+ <br> <br>
+<% category_id=@category_id %>
+<% if !@subcategory_id %>
+<% subcategory_id=@category_id %>
+<% else %>
+<% subcategory_id=@subcategory_id %>
+<% end %>
+
+ <%= form_tag({controller:'subcategories', action:'show', id: subcategory_id, sub: category_id } , method: :get) do %>
+ <%= hidden_field_tag :sub , @category_id %>
+
+ <input type="hidden" name="max_zena" value="<%= @max_zena %>" />
+<input type="hidden" name="min_zena" value="<%= @min_zena %>" />
+ <input type="hidden" name="select_max_zena" value="<%= @max_zena %>" />
+<input type="hidden" name="select_min_zena" value="<%= @min_zena %>" />
+
+        <%= text_field_tag :search,'',placeholder: "Поиск товара", style: 'width:80%' %>
+        <br>
+        <%= submit_tag 'Найти' %>
+      <% end %>
+
+<!-------------------------------->
 </div>
 
 </div>
 <table class='product'>
 <tr>
 <% kol_tr=0 %>
-
+<% if @products.all.empty? %>
+<div class='empty'>
+ничего не найдено 
+</div>
+<% end %>
 <% @products.each do |prod| %>
 <td>
+
 <div class='product_body'>
+
 
 <div class='product_image'>
   <%= link_to image_tag(prod.picture_url(:thumb) || 'product_blank.gif', class: 'thumb'), prod %>
@@ -50,7 +82,7 @@ min_zena_=<%= @min_zena %>;
 <%= number_to_currency(prod.price, precision: 2, unit: "грн.", separator: ",", delimiter: " ", format: "%n %u") %>
 </div>
 <div>
-<%= link_to 'в корзину', prod, class: 'button' %>
+<%= link_to 'в корзину', {controller: 'items', action: 'create', product_id: prod.id}, method: :post, class: 'button' %>
 </div>
 
 </div>

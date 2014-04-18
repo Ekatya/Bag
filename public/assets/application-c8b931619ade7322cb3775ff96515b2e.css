@@ -1,0 +1,273 @@
+/* line 1, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+/* line 8, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.image_root {
+  width: 300px;
+  height: 400px;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* line 16, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.on_root {
+  margin: 30px 0 0 20px;
+  position: relative;
+}
+
+/* line 21, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.logo {
+  font-family: 'comic sans ms';
+  font-size: 30px;
+  padding: 10px 0 0 20px;
+  text-shadow: 3px 3px 0px #cd00cd;
+}
+
+/* line 27, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.color {
+  float: left;
+  position: relative;
+  width: 50px;
+}
+
+/* line 33, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.body {
+  position: relative;
+  margin: 0 auto;
+  width: 1024px;
+  padding: 0 4px 0 4px;
+  background: url("/i3.png");
+}
+
+/* line 42, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.sign_in {
+  position: absolute;
+  left: 700px;
+  top: 10px;
+  color: #0095eb;
+}
+
+/* line 49, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.sing_email {
+  width: 150px;
+}
+
+/* line 53, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.header {
+  height: 110px;
+  margin-bottom: 10px;
+  background-image: url("/i1.jpeg");
+}
+
+/* line 59, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.product_body {
+  margin: 0 5px 0 5px;
+}
+
+/* line 64, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+a.product_name {
+  color: #0095eb;
+}
+
+/* line 68, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.button {
+  box-shadow: 0px 1px 0px 0px white inset;
+  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%) repeat scroll 0% 0% #ededed;
+  border-radius: 6px 6px 6px 6px;
+  border: 1px solid #cccccc;
+  display: inline-block;
+  color: #555555;
+  font-family: arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 20px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px white;
+}
+
+/* line 83, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.button:hover {
+  background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%) repeat scroll 0% 0% #dfdfdf;
+}
+
+/* line 87, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.reg_a {
+  text-decoration: none;
+  font-size: 13px;
+  color: black;
+}
+
+/* line 93, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.reg_a:hover {
+  text-decoration: pointer;
+  font-size: 12px;
+}
+
+/* line 99, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+table.product {
+  position: relative;
+}
+
+/* line 104, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+table.product td {
+  width: 256px;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* line 110, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+img.thumb {
+  border: 1px solid #ededed;
+}
+
+/* line 114, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.product_image {
+  padding: 5px 0 5px 0;
+  background: white;
+  border: 1px solid #ededed;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* line 122, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.product_price {
+  margin-bottom: 8px;
+}
+
+/* line 126, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.product_name {
+  margin-bottom: 8px;
+}
+
+/* line 130, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.menu {
+  text-align: center;
+  padding-top: 6px;
+}
+
+/* line 135, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+a.menu {
+  font-weight: bold;
+  margin-right: 5px;
+  font-size: 16px;
+  padding: 6px 11px;
+  color: #606060;
+  border: 1px solid #d5d5d5;
+  background-color: white;
+  padding: 5px 10px 6px;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+}
+
+/* line 148, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+a.menu:hover {
+  border: 1;
+  background: none;
+}
+
+/* line 153, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+a.menu_present {
+  margin-right: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 11px;
+  color: #606060;
+}
+
+/* line 161, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.active_admin {
+  border-radius: 200px 200px 200px 200px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: Helvetica,Arial,sans-serif;
+  line-height: 12px;
+  text-decoration: none;
+  background: -moz-linear-gradient(-90deg, white, #e7e7e7) repeat scroll 0% 0% transparent;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(255, 255, 255, 0.8) inset;
+  border-width: 1px;
+  border-style: solid;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-color: lightgrey #c7c7c7 #c2c2c2;
+  text-shadow: 0px 1px 0px white;
+  color: #5e6469;
+  padding: 10px 17px 10px;
+  margin: 0px;
+}
+
+/* line 186, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+table.active_admin_ {
+  display: inline-block;
+  font-weight: bold;
+  width: 100%;
+  font-size: 13px;
+  font-family: Helvetica,Arial,sans-serif;
+  line-height: 12px;
+  text-decoration: none;
+  background: -moz-linear-gradient(-90deg, white, #e7e7e7) repeat scroll 0% 0% transparent;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(255, 255, 255, 0.8) inset;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-color: lightgrey #c7c7c7 #c2c2c2;
+  color: #5e6469;
+  padding: 10px 17px 10px;
+  margin: 0px;
+}
+
+/* line 207, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+table.active_admin_ a:hover {
+  color: #5e6469;
+}
+
+/* line 211, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.active_admin_text {
+  width: 100%;
+}
+
+/* line 215, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+.active_admin_div {
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-size: 1.5em;
+  line-height: 100%;
+  font-weight: bold;
+  color: #5e6469;
+  font-family: inherit;
+  text-shadow: 0px 1px 0px #5e6469;
+}
+
+/* line 226, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.admin_header a {
+  color: #cdcdcd;
+  border: 0;
+  font-size: 0.7em;
+  background: #5e6469;
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+/* line 235, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.admin_header a:hover {
+  border-radius: 200px 200px 200px 200px;
+  background: none repeat scroll 0% 0% #7b8389;
+}
+
+/* line 240, /home/q1/Bag/app/assets/stylesheets/application.css.scss */
+div.admin_header {
+  background: #5e6469;
+  padding: 10px 0 10px 0;
+}
