@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-1.6.1.min.js
 // require turbolinks 
 //конфликт с выбором цены
 

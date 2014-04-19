@@ -21,12 +21,6 @@ class SubcategoriesController < ApplicationController
   	@subcategories=Subcategory.all.where('category_id =?', @category_id)
   	products_without_paginate=Product.where('subcategory_id =? and price<=? and price>=?', params[:id], max_select, min_select).order('price')
     products_without_paginate=products_without_paginate.where('color_id==?', params[:color]) if params[:color]
-    if params[:search]
-      if params[:search].length>0
-
-    products_without_paginate=products_without_paginate.where('name LIKE ? ', "%#{params[:search]}%")
-      end
-    end
   	@products=products_without_paginate.paginate(:page => params[:page], :per_page => Number_product_2)
 
     if select==false # при первом запуске

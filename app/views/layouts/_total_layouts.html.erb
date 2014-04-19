@@ -1,0 +1,22 @@
+<body>
+
+<div class='body'>
+<div class='header'>
+<div class='logo'>YOUR NEW BAG</div>
+<div class='on_root'> <%= link_to 'на главную', root_path %>&emsp;&emsp;
+<%= link_to 'o нас', root_path %>&emsp;&emsp;
+
+<% if current_cart.items.count>0 %>
+<%= link_to(carts_path) do %>
+В корзине: <%= current_cart.items.count %>
+            <%= Russian.p(current_cart.items.count, "товар", "товара", "товаров") %>
+<% end %>
+<% end %>
+
+</div>
+</div>
+<%= yield %>
+<%= render partial: "users/user_sign_in_up" %>
+</br></br></br></br>
+</div>
+</body>

@@ -2,33 +2,13 @@
 <html>
 <head>
   <title>Bag</title>
-  <%= stylesheet_link_tag    "application","product_show", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application","product_show", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <script type="text/javascript" src="/assets/mootools.js"></script>
-		<script type="text/javascript" src="/assets/moocicle.js"></script>
+<%= javascript_include_tag "mootools.js" %>
+<%= javascript_include_tag "moocicle.js" %>
 
 </head>
-<body>
-<div class='body'>
-<div class='header'>
-<div class='logo'>YOUR NEW BAG</div>
-<div class='on_root'> <%= link_to 'на главную', root_path %>&emsp;&emsp;
-
-<% if current_cart.items.count>0 %>
-<%= link_to(carts_path) do %>
-В корзине: <%= current_cart.items.count %>
-            <%= Russian.p(current_cart.items.count, "товар", "товара", "товаров") %>
-<% end %>
-<% end %>
-
-</div>
-</div>
-<%= yield %>
-<% if @sign_in_view!=false %>
-<%= render partial: "users/user_sign_in_up" %>
-<% end %>
-</div>
-</body>
+<%= render 'layouts/total_layouts' %>
 </html>
