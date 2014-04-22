@@ -13,6 +13,23 @@ body{
 	margin:5px;
 }
 
+.cart_table{
+	border:1px solid white;
+white-space: nowrap;
+margin:4px;
+padding: 20px;
+font-size: 16px;
+margin:0 auto;
+}
+
+.text_span{
+	color: rgb(23, 143, 223);
+}
+.cart_table td{
+	width:100px;
+
+}
+
 div.empty{
 	height:300px;
 	padding-top: 20px;
@@ -67,9 +84,12 @@ div.product_body{
 margin:0 5px 0 5px;
 }
 
-
 a.product_name{
 color: rgb(0, 149, 235);
+}
+
+hr{
+	color:white;
 }
 
 .button{

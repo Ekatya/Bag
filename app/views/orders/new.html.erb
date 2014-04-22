@@ -1,29 +1,47 @@
-<h3>Оформление заказа</h3>
+<center><h3><span class='text_span'>Оформление заказа</span></h3></center>
+
 
 <%= form_for(@order) do |f| %>
-
-
-  <div>
-    <%= f.label :user_name %><br>
+<table class="cart_table">
+<tr>
+<td>
+    <%= f.label :user_name, 'Имя' %>
+    </td>
+    <td>
     <%= f.text_field :user_name %>
-  </div>
-  <div>
-    <%= f.label :email %><br>
+</td>
+</tr>
+<tr>
+<td>
+    <%= f.label :email %>
+    </td>
+    <td>
     <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :adress %><br>
+</td>
+</tr> 
+<tr>
+<td>
+    <%= f.label :adress, 'Aдресс' %>
+        </td>
+    <td>
     <%= f.text_area :adress, rows: 3, cols: 40 %>
-  </div>
-  <div>
-    <%= f.label :description %><br>
+</td>
+</tr>
+<tr>
+<td>
+    <%= f.label :description, 'Доп. информация' %>&emsp;&emsp;
+            </td>
+    <td>
     <%= f.text_area :description, rows: 3, cols: 40 %>
-  </div>
-  <div>
-    <%= f.submit 'Оформить' %>
-  </div>
-<% end %>
-
+</td>
+</tr>
+<tr>
+<td colspan="2" align='right'>
+    <%= f.submit 'Оформить', class: 'button' %>
+</td>
+</tr>
+<tr>
+<td colspan="2">
 <% if @order.errors.any? %>
     <div>
       <ul>
@@ -33,4 +51,10 @@
       </ul>
     </div>
   <% end %>
+</td>
+</tr>
+</table>
+<% end %>
+
+
 

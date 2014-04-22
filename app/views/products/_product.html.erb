@@ -58,19 +58,22 @@ min_zena_=<%= @min_zena %>;
 </div>
 
 </div>
+
+
 <table class='product'>
 <tr>
 <% kol_tr=0 %>
-<% if @products.all.empty? %>
-<div class='empty'>
-ничего не найдено 
-</div>
+
+<% if params[:search] %>
+<% search_text=params[:search] %>
+<% else %>
+<% search_text='' %>
 <% end %>
-<% params[:search]='' if !params[:search] %>
+
 <% search=false %>
 <% @products.each do |prod| %>
 
-<% if prod.name.include?(params[:search]) %>
+<% if prod.name.include?(search_text) %>
 <% search=true %>
 <td>
 
@@ -102,12 +105,13 @@ min_zena_=<%= @min_zena %>;
 <% end %>
 <% end %>
 
-<% if search==false %>
-
+<% if search==false or @products.all.empty? %>
 <div class='empty'>
 ничего не найдено 
 </div>
 <% end %>
+
+
 
 </tr>
 </table>

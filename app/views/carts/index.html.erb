@@ -1,4 +1,4 @@
-<h1>Корзина</h1>
+<center><h3><span class='text_span'>Корзина</span></h3></center>
 <table class="cart_table">
 <% current_cart.items.each_with_index do |item, i| %>
       <tr>
@@ -6,17 +6,23 @@
         <td><%= item.product.name %></td>
         <td><%= item.quantity %></td>
         <td><%=item.price*item.quantity %></td>
-        <td><%= link_to 'удалить', item_path(item), method: :delete %></td>
+        <td><%= link_to 'удалить', item_path(item), method: :delete , class: 'text_span' %></td>
       </tr>
 <% end %>
   <tr>
-    <td colspan="3">Итого</td>
-    <td colspan="2"><%= @total_price %> грн.</td>
+  <td colspan="5"><br><br><br><hr></td>
   </tr>
-</table>
-
+  <tr>
+    <td colspan="3"><b>Итого</b></td>
+    <td colspan="2"><b><%= @total_price %> грн.</b></td>
+</tr>
+<tr>
+<td colspan="5" align='right'><br><br><br>
+<%= link_to 'Очистить корзину',{controller: "carts", action: "destroy",id: current_cart.id },:method => :delete, class: 'button' %>
+&emsp;&emsp;
 <% if current_cart.items.any? %>
-<br><%= link_to 'Оформить заказ', new_order_path %>
+<%= link_to 'Оформить заказ', new_order_path, class: 'button' %>
 <% end %>
-
-<br><%= link_to 'Очистить корзину',{controller: "carts", action: "destroy",id: current_cart.id },:method => :delete %>
+</td>
+</tr>
+</table>

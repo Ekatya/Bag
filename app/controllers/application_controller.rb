@@ -31,6 +31,6 @@ class ApplicationController < ActionController::Base
 	end
 	helper_method :current_cart
 
-	Number_product_1=12; #кол-во выводимых продуктов в категориях
-    Number_product_2=12; #кол-во выводимых продуктов в подкатегориях
+	Number_product_1=6; #кол-во выводимых продуктов в категориях
+    Number_product_2=6; #кол-во выводимых продуктов в подкатегориях
 end

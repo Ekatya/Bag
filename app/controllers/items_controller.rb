@@ -24,7 +24,17 @@ class ItemsController < ApplicationController
 
   def destroy
     Item.find(params[:id]).destroy
+    if Item.find_by(cart_id: current_cart.id)
     redirect_to :back
+    else
+    redirect_to root_url
+    end
+    #render json: Item.find_by(current_cart.id)
+
+    #cart.find_by(params[:id])
+    #redirect_to :back
+
+
   end
 
 

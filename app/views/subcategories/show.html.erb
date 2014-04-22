@@ -13,5 +13,7 @@
 
 <br> <br>
 <center>
+<% if !params[:search] %>
 <%= will_paginate @products %>
+<% end %>
 </center>
