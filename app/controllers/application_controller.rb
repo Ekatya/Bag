@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
 
 	def current_cart
 
-	if session[:cart_id]==Cart.find_by(id: session[:cart_id]).id
+	if session[:cart_id] and Cart.find_by(id: session[:cart_id])
 		cart = Cart.find_by(session[:cart_id])
 		else
 		cart = Cart.create
